@@ -454,9 +454,11 @@ function pushRemote(){
 }
 
 function parseFirebaseConfig(raw){
-  try{ return JSON.parse(raw); }
+  const match = raw.match(/firebaseConfig\s*=\s*(\{[\s\S]*?\})\s*;/);
+  const candidate = match ? match[1] : raw;
+  try{ return JSON.parse(candidate); }
   catch(e){
-    try{ return new Function("return (" + raw + ")")(); }
+    try{ return new Function("return (" + candidate + ")")(); }
     catch(e2){ return null; }
   }
 }
