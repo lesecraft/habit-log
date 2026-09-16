@@ -177,7 +177,7 @@
     width:100%;
   }
   .form-field input:focus{ outline:2px solid var(--purple-soft); border-color:var(--purple); }
-  .weekday-picker{ display:flex; gap:6px; }
+  .weekday-picker{ display:flex; gap:6px; flex-wrap:wrap; }
   .weekday-picker button{
     width:34px; height:34px;
     border-radius: 50%;
@@ -188,7 +188,7 @@
     font-size:12px;
   }
   .weekday-picker button.on{ background: var(--purple); border-color: var(--purple); color: #fff; }
-  .color-picker{ display:flex; gap:6px; }
+  .color-picker{ display:flex; gap:6px; flex-wrap:wrap; }
   .color-picker span{
     width:22px; height:22px; border-radius:50%; cursor:pointer; border:2px solid transparent;
   }
@@ -830,6 +830,8 @@ function openHabitForm(editId){
         <label>Tage</label>
         <div class="weekday-picker" id="weekdayPicker"></div>
       </div>
+    </div>
+    <div class="form-row">
       <div class="form-field">
         <label>Farbe</label>
         <div class="color-picker" id="colorPicker"></div>
