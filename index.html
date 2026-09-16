@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Habit-Log</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0EA5E9">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Habit-Log">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+  :root{
+    --bg: #F3F2FA;
+    --surface: #FFFFFF;
+    --surface-2: #F7F6FC;
+    --border: #E7E4F3;
+    --text: #2B2540;
+    --text-muted: #8B85A6;
+    --purple: #0EA5E9;
+    --purple-dark: #0B87C2;
+    --purple-soft: #E3F4FD;
+    --mint: #00C9A7;
+    --mint-soft: #DDF7F1;
+    --coral: #FF6B7A;
+    --coral-soft: #FFE7EA;
+    --radius: 12px;
+    --shadow: 0 2px 10px rgba(43,37,64,0.08);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height:1.4;
+    padding-bottom: 60px;
+    overscroll-behavior: contain;
+  }
+  header{
+    padding: 26px 20px 16px;
+    background: var(--purple);
+    color: #fff;
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  header h1{
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.2px;
+    margin:0;
+    color: #fff;
+  }
+  header h1 span{ color: var(--mint); }
+  .week-nav{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color: rgba(255,255,255,0.85);
+    font-size: 14px;
+  }
+  .week-nav button{
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    width: 30px; height:30px;
+    border-radius: 8px;
+    cursor:pointer;
+    font-size:16px;
+  }
+  .week-nav button:hover{ background: rgba(255,255,255,0.22); }
+  #panel-day .week-nav, #panel-day .week-nav span{ color: var(--text-muted); }
+  #panel-day .week-nav button{ background: var(--surface); border:1px solid var(--border); color: var(--text); }
+  #panel-day .week-nav button:hover{ border-color: var(--purple); color: var(--purple); }
+  main{ max-width: 980px; margin: 0 auto; padding: 24px 20px; }
+  .tabs{
+    display:flex; gap:6px; margin-bottom:22px;
+    overflow-x:auto;
+  }
+  .tab{
+    padding: 8px 14px;
+    background:none;
+    border:none;
+    color: var(--text-muted);
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    border-radius: 999px;
+    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .tab-icon{ font-size:15px; line-height:1; }
+  .tab.active{ color: var(--purple); background: var(--purple-soft); }
+
+  .panel{ display:none; }
+  .panel.active{ display:block; }
+
+  table.grid{ width:100%; border-collapse: collapse; background:var(--surface); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+  .table-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:var(--radius); }
+  table.grid th.habit-col, table.grid td.habit-col{ position:sticky; left:0; z-index:2; }
+  table.grid th.habit-col{ background: var(--surface-2); }
+  table.grid td.habit-col{ background: var(--surface); box-shadow: 2px 0 4px rgba(43,37,64,0.06); }
+  table.grid th{
+    font-weight:600;
+    font-size:12px;
+    color: var(--text-muted);
+    text-align:center;
+    padding: 12px 4px;
+    background: var(--surface-2);
+  }
+  table.grid th.habit-col, table.grid td.habit-col{ text-align:left; padding-left:16px; }
+  table.grid td{ text-align:center; padding: 8px 4px; vertical-align:middle; border-top:1px solid var(--border); }
+  .habit-name{ display:flex; align-items:center; gap:8px; font-size:14px; font-weight:600; }
+  .habit-name-text{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .drag-handle{ cursor:grab; color:var(--text-muted); font-size:15px; touch-action:none; user-select:none; line-height:1; }
+  .drag-handle:active{ cursor:grabbing; }
+  tr.dragging-row{ opacity:0.4; }
+  .dot{ width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+  .cell-btn{
+    width:32px; height:32px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    cursor:pointer;
+    color: var(--text-muted);
+    font-size:14px;
+    display:inline-flex; align-items:center; justify-content:center;
+    touch-action: none;
+    user-select: none;
+  }
+  .cell-btn.off-target{ opacity: 0.4; border-style: dashed; background:transparent; }
+  .cell-btn.done{ background: var(--mint); border-color: var(--mint); color: #fff; font-weight:700; }
+  .cell-btn.future{ cursor:not-allowed; opacity:0.3; }
+  .cell-btn:hover:not(.future){ border-color: var(--purple); }
+  .streak-col{ font-size:13px; color: var(--text-muted); white-space:nowrap; padding-right:16px; }
+  .streak-num{ color: var(--mint); font-weight:700; font-size:15px; }
+
+  .add-bar{ margin-top:20px; }
+  .add-bar > button{
+    background: var(--purple);
+    border: none;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 999px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+  }
+  .add-bar > button:hover{ background: var(--purple-dark); }
+
+  .card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+  .form-row{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px; }
+  .form-field{ display:flex; flex-direction:column; gap:5px; flex:1; min-width:120px; }
+  .form-field label{ font-size:12px; color:var(--text-muted); font-weight:600; }
+  .form-field input[type=text], .form-field input[type=number]{
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size:14px;
+    width:100%;
+  }
+  .form-field input:focus{ outline:2px solid var(--purple-soft); border-color:var(--purple); }
+  .weekday-picker{ display:flex; gap:6px; }
+  .weekday-picker button{
+    width:34px; height:34px;
+    border-radius: 50%;
+    border:1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--text-muted);
+    cursor:pointer;
+    font-size:12px;
+  }
+  .weekday-picker button.on{ background: var(--purple); border-color: var(--purple); color: #fff; }
+  .color-picker{ display:flex; gap:6px; }
+  .color-picker span{
+    width:22px; height:22px; border-radius:50%; cursor:pointer; border:2px solid transparent;
+  }
+  .color-picker span.on{ border-color: var(--text); }
+  .btn-row{ display:flex; gap:10px; margin-top:6px; }
+  .btn-primary{
+    background: var(--mint); color: #fff; border:none;
+    padding: 10px 18px; border-radius: 999px; cursor:pointer; font-size:14px; font-weight:700;
+  }
+  .btn-primary:hover{ opacity:0.9; }
+  .btn-secondary{
+    background:var(--surface); border:1px solid var(--border); color: var(--text-muted);
+    padding:10px 18px; border-radius: 999px; cursor:pointer; font-size:14px; font-weight:600;
+  }
+  .btn-danger-text{
+    background:none; border:none; color: var(--coral); cursor:pointer; font-size:13px; font-weight:600; text-decoration:underline;
+  }
+
+  .habit-actions{ display:flex; gap:10px; margin-top:2px; }
+  .habit-actions button{ background:none; border:none; color: var(--text-muted); cursor:pointer; font-size:12px; padding:2px; font-weight:600; }
+  .habit-actions button:hover{ color: var(--purple); }
+
+  /* stats */
+  .stat-block{ margin-bottom: 22px; background:var(--surface); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; }
+  .stat-header{ display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; flex-wrap:wrap; gap:6px; }
+  .stat-title{ display:flex; align-items:center; gap:8px; font-size:15px; font-weight:700; }
+  .stat-numbers{ font-size:13px; color: var(--text-muted); display:flex; gap:16px; }
+  .stat-numbers b{ color: var(--mint); font-weight:700; font-size:16px; }
+  .heatmap{ display:grid; grid-template-columns: repeat(26, 10px); grid-auto-flow: column; gap:3px; overflow-x:auto; padding-bottom:4px; }
+  .heatmap .sq{ width:10px; height:10px; border-radius:2px; background: var(--surface-2); }
+  .chart-wrap{ background: var(--surface); border:1px solid var(--border); box-shadow:var(--shadow); border-radius: var(--radius); padding:16px; margin-bottom:20px; }
+  .chart-wrap h3{ margin:0 0 12px; font-size:14px; font-weight:700; color: var(--text); }
+  .chart-wrap svg{ display:block; }
+
+  .empty{ color: var(--text-muted); font-size:14px; padding: 30px 0; text-align:center; }
+
+  /* day view */
+  .hidden-hours-bar{ margin: 16px 0 4px; display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:12px; color:var(--text-muted); }
+  .hidden-hours-bar .chip{ background:var(--surface); border:1px solid var(--border); border-radius:999px; padding:4px 12px; cursor:pointer; }
+  .hidden-hours-bar .chip:hover{ border-color: var(--purple); color:var(--purple); }
+  .day-layout{ display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap; }
+  .hour-list{ flex:1; min-width:260px; max-height: 560px; overflow-y:auto; background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow); border-radius:var(--radius); }
+  .hour-row{ display:flex; align-items:flex-start; gap:10px; min-height:46px; border-top:1px solid var(--border); padding:6px 8px; }
+  .hour-row:first-child{ border-top:none; }
+  .hour-row.drag-over{ background: var(--purple-soft); }
+  .hour-label{ width:44px; color:var(--text-muted); font-size:11px; flex-shrink:0; padding-top:6px; font-weight:600; }
+  .hour-blocks{ flex:1; display:flex; flex-wrap:wrap; gap:6px; min-height:32px; }
+  .hide-hour-btn{ opacity:0; transition:opacity .15s; background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:12px; align-self:center; }
+  .hour-row:hover .hide-hour-btn{ opacity:1; }
+  .hide-hour-btn:hover{ color:var(--coral); }
+  .inbox{ width:230px; flex-shrink:0; }
+  .inbox h3{ font-size:13px; color:var(--text-muted); margin:0 0 10px; font-weight:700; }
+  .inbox-list{ display:flex; flex-direction:column; gap:8px; min-height:80px; background:var(--surface); border:1px dashed var(--border); border-radius:var(--radius); padding:10px; }
+  .inbox-list.drag-over{ border-color:var(--purple); background:var(--purple-soft); }
+  .block{
+    background: var(--surface-2); border:1px solid var(--border); border-left:4px solid var(--text-muted);
+    border-radius: 8px; padding:6px 10px; font-size:13px; cursor:grab; touch-action:none;
+    user-select:none; min-width:100px; position:relative;
+  }
+  .block.done{ opacity:0.55; background: var(--mint-soft); border-color: var(--mint); }
+  .block.done span:first-of-type{ text-decoration: line-through; }
+  .block .dur{ font-size:11px; color:var(--text-muted); display:block; margin-top:2px; }
+  .block-del{ position:absolute; top:2px; right:4px; background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:14px; line-height:1; }
+  .block-del:hover{ color: var(--coral); }
+  .block-actions{ position:absolute; top:2px; right:4px; display:flex; gap:6px; }
+  .block-actions .block-del{ position:static; }
+  .block-postpone{ background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:13px; line-height:1; }
+  .block-postpone:hover{ color: var(--purple); }
+  .ghost-block{ position:fixed; z-index:100; opacity:0.9; }
+
+  /* modal */
+  .overlay{
+    position:fixed; inset:0; background: rgba(43,37,64,0.45);
+    display:none; align-items:center; justify-content:center; z-index:50;
+  }
+  .overlay.show{ display:flex; }
+  .modal{
+    background: var(--surface); border:1px solid var(--border); border-radius: var(--radius); box-shadow:var(--shadow);
+    padding: 22px; width: 340px; max-width: 90vw;
+  }
+  .modal h3{ margin:0 0 14px; font-size:15px; font-weight:700; }
+  .modal textarea{
+    width:100%; background: var(--surface-2); border:1px solid var(--border); color:var(--text);
+    border-radius: 8px; padding:8px 10px; font-size:13px; font-family:inherit; resize:vertical; min-height:60px;
+  }
+
+  /* toast */
+  #toast{
+    position:fixed; bottom:24px; left:50%; transform: translateX(-50%) translateY(20px);
+    background: var(--purple-dark); border:none; color:#fff;
+    padding: 12px 18px; border-radius: 999px; display:flex; gap:16px; align-items:center;
+    opacity:0; pointer-events:none; transition: all .2s ease; font-size:13px; z-index:60; box-shadow:var(--shadow);
+  }
+  #toast.show{ opacity:1; transform: translateX(-50%) translateY(0); pointer-events:auto; }
+  #toast button{ background:none; border:none; color: var(--mint); cursor:pointer; font-size:13px; font-weight:700; }
+
+  .modal textarea, #syncConfig{
+    width:100%; background: var(--surface-2); border:1px solid var(--border); color:var(--text);
+    border-radius: 8px; padding:8px 10px; font-size:12px; font-family: ui-monospace, monospace; resize:vertical; min-height:90px;
+  }
+  #syncStatus.ok{ color: var(--mint); font-weight:600; }
+  #syncStatus.error{ color: var(--coral); font-weight:600; }
+  #syncStatus.pending{ color: var(--text-muted); }
+
+  @media (max-width: 600px){
+    main{ padding: 18px 10px; }
+    header{ padding: 22px 14px 14px; }
+    table.grid th{ padding: 5px 1px; font-size: 9px; }
+    table.grid td{ padding: 2px 1px; }
+    table.grid td.habit-col{ padding-left: 6px; }
+    .cell-btn{ width: 25px; height: 25px; border-radius: 6px; font-size: 12px; }
+    .habit-name{ gap: 4px; font-size: 13px; }
+    .habit-name-text{ max-width: 15vw; }
+    .drag-handle{ font-size: 12px; }
+    .dot{ width: 8px; height: 8px; }
+    .habit-actions{ gap: 6px; }
+    .habit-actions button{ font-size: 13px; }
+    .streak-col{ font-size: 11px; padding-right: 4px; }
+    .streak-num{ font-size: 12px; }
+    .streak-detail{ display: none; }
+    .inbox{ width: 100%; }
+    .tab-label{ display: none; }
+    .tab{ padding: 8px 10px; }
+    .tab-icon{ font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Habit<span>·</span>Log</h1>
+  <div class="week-nav">
+    <button id="prevWeek">‹</button>
+    <span id="weekLabel"></span>
+    <button id="nextWeek">›</button>
+  </div>
+</header>
+
+<main>
+  <div class="tabs">
+    <button class="tab active" data-tab="week" title="Woche"><span class="tab-icon">🗓</span><span class="tab-label">Woche</span></button>
+    <button class="tab" data-tab="day" title="Tag"><span class="tab-icon">☀️</span><span class="tab-label">Tag</span></button>
+    <button class="tab" data-tab="stats" title="Statistik"><span class="tab-icon">📊</span><span class="tab-label">Statistik</span></button>
+    <button class="tab" data-tab="archive" title="Archiv"><span class="tab-icon">🗄</span><span class="tab-label">Archiv</span></button>
+    <button class="tab" data-tab="sync" title="Sync"><span class="tab-icon">🔄</span><span class="tab-label">Sync</span></button>
+  </div>
+
+  <div class="panel active" id="panel-week">
+    <div id="weekGridWrap"></div>
+    <div class="add-bar"><button id="showAddForm">+ Neues Habit</button></div>
+    <div class="card" id="addForm" style="display:none;"></div>
+  </div>
+
+  <div class="panel" id="panel-day">
+    <div class="week-nav" style="margin-bottom:14px;">
+      <button id="prevDay">‹</button>
+      <span id="dayLabel"></span>
+      <button id="nextDay">›</button>
+    </div>
+    <div class="add-bar"><button id="showTaskForm">+ Aufgabe für diesen Tag</button></div>
+    <div class="card" id="taskForm" style="display:none;"></div>
+    <div class="day-layout">
+      <div class="hour-list" id="hourList"></div>
+      <div class="inbox">
+        <h3>Nicht verplant</h3>
+        <div class="inbox-list" id="inboxList"></div>
+      </div>
+    </div>
+    <div class="hidden-hours-bar" id="hiddenHoursBar"></div>
+  </div>
+
+  <div class="panel" id="panel-stats">
+    <div id="statsWrap"></div>
+  </div>
+
+  <div class="panel" id="panel-archive">
+    <div id="archiveWrap"></div>
+  </div>
+
+  <div class="panel" id="panel-sync">
+    <div class="card">
+      <div class="form-field" style="margin-bottom:14px;">
+        <label>Firebase-Konfiguration (aus der Firebase-Konsole einfügen)</label>
+        <textarea id="syncConfig" placeholder='{"apiKey": "...", "authDomain": "...", "projectId": "...", ...}'></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label>Sync-Code (auf beiden Geräten identisch)</label>
+          <input type="text" id="syncCode" placeholder="z.B. axf82-krmt91">
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn-secondary" id="genCode">Code generieren</button>
+        <button class="btn-primary" id="connectSync">Verbinden</button>
+      </div>
+      <div id="syncStatus" style="margin-top:14px; font-size:13px;"></div>
+    </div>
+    <div class="empty" style="text-align:left; padding:0 4px;">Der Sync-Code funktioniert wie ein gemeinsamer Schlüssel: Gib auf dem zweiten Gerät dieselbe Firebase-Konfiguration und denselben Code ein, dann gleichen sich beide automatisch ab.</div>
+  </div>
+</main>
+
+<div class="overlay" id="cellOverlay">
+  <div class="modal" id="cellModal"></div>
+</div>
+
+<div id="toast"><span id="toastMsg"></span><button id="toastUndo">Rückgängig</button></div>
+
+<script>
+const COLORS = ["#00C9A7","#4B2E97","#FF6B7A","#3D9DF6","#F2A93B","#B57BE0"];
+const WEEKDAYS = ["So","Mo","Di","Mi","Do","Fr","Sa"]; // 0=So
+const STORE_KEY = "habitlog_v1";
+
+let state = load();
+if(!state.tasks) state.tasks = [];
+if(!state.habitSchedule) state.habitSchedule = {};
+if(!state.hiddenHours) state.hiddenHours = [];
+if(!state.updatedAt) state.updatedAt = 0;
+
+let currentTab = "week";
+let weekOffset = 0;
+let dayViewDate = normalizeDate(new Date());
+
+function load(){
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    if(raw) return JSON.parse(raw);
+  }catch(e){}
+  return { habits: [], logs: {}, tasks: [], habitSchedule: {}, hiddenHours: [] };
+}
+function save(){
+  state.updatedAt = Date.now();
+  localStorage.setItem(STORE_KEY, JSON.stringify(state));
+  schedulePush();
+}
+
+function renderAll(){
+  renderWeek();
+  if(currentTab==="day") renderDay();
+  if(currentTab==="stats") renderStats();
+  if(currentTab==="archive") renderArchive();
+}
+
+// ---------- Cloud-Sync (Firebase) ----------
+let syncDocRef = null, syncSetDoc = null, syncOnSnapshot = null, pushTimer = null;
+
+function setSyncStatus(msg, kind){
+  const el = document.getElementById("syncStatus");
+  el.textContent = msg;
+  el.className = kind || "";
+}
+
+function schedulePush(){
+  if(!syncDocRef) return;
+  clearTimeout(pushTimer);
+  pushTimer = setTimeout(pushRemote, 800);
+}
+
+function pushRemote(){
+  if(!syncDocRef || !syncSetDoc) return;
+  syncSetDoc(syncDocRef, { json: JSON.stringify(state), updatedAt: state.updatedAt })
+    .then(()=> setSyncStatus("Verbunden – zuletzt synchronisiert " + new Date().toLocaleTimeString("de-DE"), "ok"))
+    .catch(err=> setSyncStatus("Sync-Fehler: " + err.message, "error"));
+}
+
+function parseFirebaseConfig(raw){
+  try{ return JSON.parse(raw); }
+  catch(e){
+    try{ return new Function("return (" + raw + ")")(); }
+    catch(e2){ return null; }
+  }
+}
+
+async function connectSync(){
+  const configRaw = document.getElementById("syncConfig").value.trim();
+  const code = document.getElementById("syncCode").value.trim();
+  if(!configRaw || !code){ setSyncStatus("Bitte Konfiguration und Sync-Code angeben.", "error"); return; }
+  const cfg = parseFirebaseConfig(configRaw);
+  if(!cfg){ setSyncStatus("Firebase-Konfiguration konnte nicht gelesen werden.", "error"); return; }
+
+  setSyncStatus("Verbinde...", "pending");
+  try{
+    const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js");
+    const { getFirestore, doc, onSnapshot, setDoc } = await import("https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js");
+    const { getAuth, signInAnonymously } = await import("https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js");
+
+    const app = initializeApp(cfg);
+    const auth = getAuth(app);
+    await signInAnonymously(auth);
+    const db = getFirestore(app);
+    syncDocRef = doc(db, "habitlog", code);
+    syncSetDoc = setDoc;
+
+    localStorage.setItem("habitlog_sync_config", configRaw);
+    localStorage.setItem("habitlog_sync_code", code);
+
+    onSnapshot(syncDocRef, (snap)=>{
+      if(!snap.exists()) return;
+      const remote = snap.data();
+      if(remote && typeof remote.updatedAt === "number" && remote.updatedAt > (state.updatedAt||0)){
+        try{
+          state = JSON.parse(remote.json);
+          localStorage.setItem(STORE_KEY, JSON.stringify(state));
+          renderAll();
+          setSyncStatus("Aktualisiert vom anderen Gerät · " + new Date().toLocaleTimeString("de-DE"), "ok");
+        }catch(e){}
+      }
+    }, (err)=> setSyncStatus("Sync-Fehler: " + err.message, "error"));
+
+    setSyncStatus("Verbunden.", "ok");
+    pushRemote();
+  }catch(err){
+    setSyncStatus("Verbindung fehlgeschlagen: " + err.message, "error");
+  }
+}
+
+async function autoConnectSync(){
+  const cfgRaw = localStorage.getItem("habitlog_sync_config");
+  const code = localStorage.getItem("habitlog_sync_code");
+  if(cfgRaw && code){
+    document.getElementById("syncConfig").value = cfgRaw;
+    document.getElementById("syncCode").value = code;
+    await connectSync();
+  }
+}
+
+function genSyncCode(){
+  return Math.random().toString(36).slice(2,8) + "-" + Math.random().toString(36).slice(2,8);
+}
+
+function uid(){ return Math.random().toString(36).slice(2,10); }
+
+function normalizeDate(d){ const x = new Date(d); x.setHours(0,0,0,0); return x; }
+function toDateStr(d){
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+function startOfWeek(offset){
+  const now = new Date();
+  now.setHours(0,0,0,0);
+  const day = now.getDay(); // 0=So
+  const diffToMonday = (day === 0 ? -6 : 1 - day);
+  const monday = new Date(now);
+  monday.setDate(now.getDate() + diffToMonday + offset*7);
+  return monday;
+}
+function weekDates(offset){
+  const start = startOfWeek(offset);
+  const arr = [];
+  for(let i=0;i<7;i++){
+    const d = new Date(start);
+    d.setDate(start.getDate()+i);
+    arr.push(d);
+  }
+  return arr;
+}
+function fmtRange(dates){
+  const opts = {day:"numeric", month:"short"};
+  return dates[0].toLocaleDateString("de-DE",opts) + " – " + dates[6].toLocaleDateString("de-DE",opts) + " " + dates[6].getFullYear();
+}
+
+function getLog(habitId, dateStr){
+  return (state.logs[habitId] && state.logs[habitId][dateStr]) || null;
+}
+function setLog(habitId, dateStr, entry){
+  if(!state.logs[habitId]) state.logs[habitId] = {};
+  if(entry === null){ delete state.logs[habitId][dateStr]; }
+  else { state.logs[habitId][dateStr] = entry; }
+  save();
+}
+
+function isTargetDay(habit, date){
+  return habit.targetDays.includes(date.getDay());
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+// ---------- Streaks ----------
+function computeStreaks(habit){
+  const today = new Date(); today.setHours(0,0,0,0);
+  let cursor = new Date(today);
+  let current = 0;
+  let stillCounting = true;
+  for(let i=0;i<3650;i++){
+    if(cursor < new Date(habit.createdAt)) break;
+    if(isTargetDay(habit, cursor)){
+      const ds = toDateStr(cursor);
+      const entry = getLog(habit.id, ds);
+      const isToday = toDateStr(cursor) === toDateStr(today);
+      if(entry && entry.done){
+        if(stillCounting) current++;
+      } else {
+        if(isToday){ /* heute noch offen, zaehlt nicht als Bruch */ }
+        else { stillCounting = false; }
+      }
+    }
+    cursor.setDate(cursor.getDate()-1);
+  }
+  let longest = 0, run = 0;
+  let d = new Date(habit.createdAt); d.setHours(0,0,0,0);
+  const end = today;
+  while(d <= end){
+    if(isTargetDay(habit, d)){
+      const entry = getLog(habit.id, toDateStr(d));
+      if(entry && entry.done){ run++; longest = Math.max(longest, run); }
+      else { run = 0; }
+    }
+    d.setDate(d.getDate()+1);
+  }
+  return { current, longest: Math.max(longest, current) };
+}
+
+// ---------- Rendering: Week Grid ----------
+function renderWeek(){
+  const dates = weekDates(weekOffset);
+  document.getElementById("weekLabel").textContent = fmtRange(dates);
+  const activeHabits = state.habits.filter(h => !h.archived);
+  const wrap = document.getElementById("weekGridWrap");
+
+  if(activeHabits.length === 0){
+    wrap.innerHTML = '<div class="empty">Noch keine Habits angelegt. Leg dein erstes mit „+ Neues Habit" an.</div>';
+    return;
+  }
+
+  const today = new Date(); today.setHours(0,0,0,0);
+
+  let html = '<table class="grid"><thead><tr><th class="habit-col">Habit</th>';
+  dates.forEach(d => {
+    html += `<th>${WEEKDAYS[d.getDay()]}<br><span style="color:var(--text-muted); font-weight:400;">${d.getDate()}.</span></th>`;
+  });
+  html += '<th>Serie</th></tr></thead><tbody>';
+
+  activeHabits.forEach((habit, idx) => {
+    const streaks = computeStreaks(habit);
+    html += `<tr data-row-id="${habit.id}" class="${draggingHabitId===habit.id?"dragging-row":""}"><td class="habit-col"><div class="habit-name"><span class="drag-handle" title="Ziehen zum Sortieren">⠿</span><span class="dot" style="background:${habit.color}"></span><span class="habit-name-text">${escapeHtml(habit.name)}</span></div>
+      <div class="habit-actions">
+        <button data-edit="${habit.id}" title="Bearbeiten">✎</button><button data-archive="${habit.id}" title="Archivieren">🗄</button>
+      </div></td>`;
+    dates.forEach(d => {
+      const ds = toDateStr(d);
+      const target = isTargetDay(habit, d);
+      const entry = getLog(habit.id, ds);
+      const isFuture = d > today;
+      let cls = "cell-btn";
+      if(!target) cls += " off-target";
+      if(entry && entry.done) cls += " done";
+      if(isFuture) cls += " future";
+      const symbol = entry && entry.done ? "✓" : (target ? "·" : "");
+      html += `<td><button class="${cls}" ${isFuture?"disabled":""} data-habit="${habit.id}" data-date="${ds}">${symbol}</button></td>`;
+    });
+    html += `<td class="streak-col"><span class="streak-num">🔥 ${streaks.current}</span><span class="streak-detail"> · <span class="streak-num">${streaks.longest}</span> max</span></td></tr>`;
+  });
+
+  html += '</tbody></table>';
+  wrap.innerHTML = '<div class="table-scroll">' + html + '</div>';
+
+  wrap.querySelectorAll("button[data-habit]").forEach(btn=>{
+    btn.addEventListener("pointerdown", (e)=> startCellSwipe(e, btn));
+  });
+  wrap.querySelectorAll("button[data-edit]").forEach(btn=>{
+    btn.addEventListener("click", ()=> openHabitForm(btn.dataset.edit));
+  });
+  wrap.querySelectorAll("button[data-archive]").forEach(btn=>{
+    btn.addEventListener("click", ()=> archiveHabit(btn.dataset.archive));
+  });
+  wrap.querySelectorAll(".drag-handle").forEach(handle=>{
+    handle.addEventListener("pointerdown", (e)=>{
+      const tr = handle.closest("tr");
+      startRowDrag(e, tr.dataset.rowId);
+    });
+  });
+}
+
+let draggingHabitId = null;
+
+function startRowDrag(e, id){
+  draggingHabitId = id;
+  renderWeek();
+  function onMove(ev){
+    const el = document.elementFromPoint(ev.clientX, ev.clientY);
+    if(!el) return;
+    const tr = el.closest("tr[data-row-id]");
+    if(!tr) return;
+    const hoverId = tr.dataset.rowId;
+    if(hoverId === draggingHabitId) return;
+    reorderHabit(draggingHabitId, hoverId);
+  }
+  function onUp(){
+    document.removeEventListener("pointermove", onMove);
+    document.removeEventListener("pointerup", onUp);
+    draggingHabitId = null;
+    renderWeek();
+  }
+  document.addEventListener("pointermove", onMove);
+  document.addEventListener("pointerup", onUp);
+}
+
+function reorderHabit(draggedId, targetId){
+  const activeHabitsList = state.habits.filter(h=>!h.archived);
+  const archivedHabits = state.habits.filter(h=>h.archived);
+  const activeIds = activeHabitsList.map(h=>h.id);
+  const fromPos = activeIds.indexOf(draggedId);
+  const toPos = activeIds.indexOf(targetId);
+  if(fromPos===-1 || toPos===-1) return;
+  activeIds.splice(fromPos,1);
+  activeIds.splice(toPos,0,draggedId);
+  const byId = new Map(activeHabitsList.map(h=>[h.id,h]));
+  state.habits = [...activeIds.map(id=>byId.get(id)), ...archivedHabits];
+  save();
+  renderWeek();
+}
+
+function onCellClick(habitId, dateStr){
+  const habit = state.habits.find(h=>h.id===habitId);
+  const entry = getLog(habitId, dateStr);
+  if(!entry || !entry.done){
+    setLog(habitId, dateStr, { done:true, duration: habit.duration, time: new Date().toISOString(), note:"" });
+    renderWeek();
+    if(currentTab==="stats") renderStats();
+  } else {
+    openCellModal(habit, dateStr, entry);
+  }
+}
+
+function startCellSwipe(e, startBtn){
+  const startX = e.clientX, startY = e.clientY;
+  const habitId = startBtn.dataset.habit;
+  const startDate = startBtn.dataset.date;
+  const startEntry = getLog(habitId, startDate);
+  const targetDone = !(startEntry && startEntry.done);
+  const habit = state.habits.find(h=>h.id===habitId);
+  let dragging = false;
+  const visited = new Set();
+
+  function applyToButton(btn){
+    if(btn.dataset.habit !== habitId || btn.disabled) return;
+    const dStr = btn.dataset.date;
+    if(visited.has(dStr)) return;
+    visited.add(dStr);
+    const entry = getLog(habitId, dStr);
+    const isDone = !!(entry && entry.done);
+    if(targetDone && !isDone){
+      setLog(habitId, dStr, { done:true, duration: habit.duration, time: new Date().toISOString(), note:"" });
+      btn.classList.add("done");
+      btn.textContent = "✓";
+    } else if(!targetDone && isDone){
+      setLog(habitId, dStr, null);
+      btn.classList.remove("done");
+      btn.textContent = btn.classList.contains("off-target") ? "" : "·";
+    }
+  }
+
+  function onMove(ev){
+    const dx = ev.clientX-startX, dy = ev.clientY-startY;
+    if(!dragging && Math.hypot(dx,dy) > 8) dragging = true;
+    if(dragging){
+      const el = document.elementFromPoint(ev.clientX, ev.clientY);
+      const btn = el && el.closest("button[data-habit]");
+      if(btn) applyToButton(btn);
+    }
+  }
+  function onUp(){
+    document.removeEventListener("pointermove", onMove);
+    document.removeEventListener("pointerup", onUp);
+    if(!dragging){
+      onCellClick(habitId, startDate);
+    } else {
+      renderWeek();
+      if(currentTab==="stats") renderStats();
+    }
+  }
+  document.addEventListener("pointermove", onMove);
+  document.addEventListener("pointerup", onUp);
+}
+
+function openCellModal(habit, dateStr, entry){
+  const overlay = document.getElementById("cellOverlay");
+  const modal = document.getElementById("cellModal");
+  const dateLabel = new Date(dateStr).toLocaleDateString("de-DE",{weekday:"long", day:"numeric", month:"long"});
+  modal.innerHTML = `
+    <h3>${escapeHtml(habit.name)} — ${dateLabel}</h3>
+    <div class="form-row">
+      <div class="form-field">
+        <label>Dauer (Minuten)</label>
+        <input type="number" id="cellDuration" value="${entry.duration ?? habit.duration}" min="0">
+      </div>
+    </div>
+    <div class="form-field" style="margin-bottom:14px;">
+      <label>Notiz</label>
+      <textarea id="cellNote" placeholder="z.B. Grund, Kontext, Gefühl...">${escapeHtml(entry.note||"")}</textarea>
+    </div>
+    <div class="btn-row">
+      <button class="btn-primary" id="cellSave">Speichern</button>
+      <button class="btn-secondary" id="cellClose">Schließen</button>
+    </div>
+    <div style="margin-top:12px;"><button class="btn-danger-text" id="cellRemove">Erledigt-Markierung entfernen</button></div>
+  `;
+  overlay.classList.add("show");
+
+  document.getElementById("cellClose").onclick = ()=> overlay.classList.remove("show");
+  document.getElementById("cellSave").onclick = ()=>{
+    const duration = parseInt(document.getElementById("cellDuration").value)||0;
+    const note = document.getElementById("cellNote").value;
+    setLog(habit.id, dateStr, {...entry, duration, note});
+    overlay.classList.remove("show");
+    renderWeek();
+  };
+  document.getElementById("cellRemove").onclick = ()=>{
+    setLog(habit.id, dateStr, null);
+    overlay.classList.remove("show");
+    renderWeek();
+    if(currentTab==="stats") renderStats();
+  };
+}
+
+// ---------- Add / Edit Habit Form ----------
+function openHabitForm(editId){
+  const form = document.getElementById("addForm");
+  form.style.display = "block";
+  const editing = editId ? state.habits.find(h=>h.id===editId) : null;
+  const chosenDays = editing ? editing.targetDays : [1,2,3,4,5];
+  const chosenColor = editing ? editing.color : COLORS[state.habits.length % COLORS.length];
+
+  form.innerHTML = `
+    <div class="form-row">
+      <div class="form-field" style="flex:2;">
+        <label>Name</label>
+        <input type="text" id="hName" value="${editing?escapeHtml(editing.name):""}" placeholder="z.B. Sport">
+      </div>
+      <div class="form-field">
+        <label>Dauer (Minuten)</label>
+        <input type="number" id="hDuration" value="${editing?editing.duration:20}" min="0">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field">
+        <label>Tage</label>
+        <div class="weekday-picker" id="weekdayPicker"></div>
+      </div>
+      <div class="form-field">
+        <label>Farbe</label>
+        <div class="color-picker" id="colorPicker"></div>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-primary" id="hSave">${editing?"Speichern":"Anlegen"}</button>
+      <button class="btn-secondary" id="hCancel">Abbrechen</button>
+    </div>
+  `;
+
+  const wp = document.getElementById("weekdayPicker");
+  [1,2,3,4,5,6,0].forEach(dayNum=>{
+    const b = document.createElement("button");
+    b.type="button";
+    b.textContent = WEEKDAYS[dayNum];
+    if(chosenDays.includes(dayNum)) b.classList.add("on");
+    b.addEventListener("click", ()=> b.classList.toggle("on"));
+    b.dataset.day = dayNum;
+    wp.appendChild(b);
+  });
+
+  const cp = document.getElementById("colorPicker");
+  COLORS.forEach(c=>{
+    const s = document.createElement("span");
+    s.style.background = c;
+    if(c===chosenColor) s.classList.add("on");
+    s.addEventListener("click", ()=>{
+      cp.querySelectorAll("span").forEach(x=>x.classList.remove("on"));
+      s.classList.add("on");
+    });
+    s.dataset.color = c;
+    cp.appendChild(s);
+  });
+
+  document.getElementById("hCancel").onclick = ()=>{ form.style.display="none"; form.innerHTML=""; };
+  document.getElementById("hSave").onclick = ()=>{
+    const name = document.getElementById("hName").value.trim();
+    if(!name) return;
+    const duration = parseInt(document.getElementById("hDuration").value)||0;
+    const days = [...wp.querySelectorAll("button.on")].map(b=>parseInt(b.dataset.day));
+    const color = cp.querySelector("span.on")?.dataset.color || COLORS[0];
+    if(editing){
+      editing.name = name; editing.duration = duration; editing.targetDays = days; editing.color = color;
+    } else {
+      state.habits.push({ id: uid(), name, duration, targetDays: days, color, archived:false, createdAt: new Date().toISOString() });
+    }
+    save();
+    form.style.display="none"; form.innerHTML="";
+    renderWeek();
+  };
+}
+
+function archiveHabit(id){
+  const habit = state.habits.find(h=>h.id===id);
+  habit.archived = true;
+  save();
+  renderWeek();
+  showToast(`„${habit.name}" archiviert`, ()=>{ habit.archived=false; save(); renderWeek(); renderArchive(); });
+  renderArchive();
+}
+
+function renderArchive(){
+  const wrap = document.getElementById("archiveWrap");
+  const archived = state.habits.filter(h=>h.archived);
+  if(archived.length===0){ wrap.innerHTML = '<div class="empty">Kein archiviertes Habit.</div>'; return; }
+  wrap.innerHTML = archived.map(h=>`
+    <div class="card" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+      <div class="habit-name"><span class="dot" style="background:${h.color}"></span>${escapeHtml(h.name)}</div>
+      <div class="btn-row" style="margin:0;">
+        <button class="btn-secondary" data-restore="${h.id}">Wiederherstellen</button>
+        <button class="btn-danger-text" data-delete="${h.id}">Endgültig löschen</button>
+      </div>
+    </div>
+  `).join("");
+  wrap.querySelectorAll("[data-restore]").forEach(b=>b.addEventListener("click", ()=>{
+    const h = state.habits.find(x=>x.id===b.dataset.restore); h.archived=false; save(); renderArchive(); renderWeek();
+  }));
+  wrap.querySelectorAll("[data-delete]").forEach(b=>b.addEventListener("click", ()=>{
+    if(!confirm("Habit inkl. aller Einträge endgültig löschen?")) return;
+    state.habits = state.habits.filter(x=>x.id!==b.dataset.delete);
+    delete state.logs[b.dataset.delete];
+    save(); renderArchive();
+  }));
+}
+
+// ---------- Toast ----------
+let toastTimer=null;
+function showToast(msg, undoFn){
+  const toast = document.getElementById("toast");
+  document.getElementById("toastMsg").textContent = msg;
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=> toast.classList.remove("show"), 5000);
+  document.getElementById("toastUndo").onclick = ()=>{
+    undoFn();
+    toast.classList.remove("show");
+  };
+}
+
+// ---------- Stats ----------
+function renderStats(){
+  const wrap = document.getElementById("statsWrap");
+  const activeHabits = state.habits.filter(h=>!h.archived);
+  if(activeHabits.length===0){ wrap.innerHTML = '<div class="empty">Noch keine Daten zum Auswerten.</div>'; return; }
+
+  wrap.innerHTML = `
+    <div id="statBlocks"></div>
+    <div class="chart-wrap"><h3>Wochenerfüllung (diese Woche)</h3><div id="weekBarChart"></div></div>
+    <div class="chart-wrap"><h3>Zu welcher Uhrzeit hakst du ab?</h3><div id="timeScatterWrap"></div></div>
+  `;
+
+  const blocks = document.getElementById("statBlocks");
+  activeHabits.forEach(habit=>{
+    const streaks = computeStreaks(habit);
+    const block = document.createElement("div");
+    block.className = "stat-block";
+    block.innerHTML = `
+      <div class="stat-header">
+        <div class="stat-title"><span class="dot" style="background:${habit.color}"></span>${escapeHtml(habit.name)}</div>
+        <div class="stat-numbers"><span><b>${streaks.current}</b> aktuelle Serie</span><span><b>${streaks.longest}</b> längste Serie</span></div>
+      </div>
+      <div class="heatmap">${buildHeatmap(habit)}</div>
+    `;
+    blocks.appendChild(block);
+  });
+
+  buildWeekBarChart(activeHabits);
+  buildTimeScatter(activeHabits);
+}
+
+function buildHeatmap(habit){
+  const today = new Date(); today.setHours(0,0,0,0);
+  const start = startOfWeek(0);
+  start.setDate(start.getDate() - 26*7);
+  let squares = [];
+  for(let w=0; w<26; w++){
+    for(let d=0; d<7; d++){
+      const date = new Date(start);
+      date.setDate(start.getDate() + w*7 + d);
+      if(date > today){ squares.push('<div class="sq" style="background:transparent"></div>'); continue; }
+      const target = isTargetDay(habit, date);
+      const entry = getLog(habit.id, toDateStr(date));
+      let bg = "var(--surface-2)";
+      if(target && entry && entry.done) bg = habit.color;
+      else if(target && (!entry || !entry.done) && date < today) bg = "var(--coral-soft)";
+      squares.push(`<div class="sq" style="background:${bg}" title="${toDateStr(date)}"></div>`);
+    }
+  }
+  return squares.join("");
+}
+
+function buildWeekBarChart(habits){
+  const dates = weekDates(0);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const data = habits.map(h=>{
+    const targets = dates.filter(d=>isTargetDay(h,d) && d<=today);
+    let pct = 0;
+    if(targets.length>0){
+      const done = targets.filter(d=>{ const e=getLog(h.id, toDateStr(d)); return e && e.done; }).length;
+      pct = Math.round(done/targets.length*100);
+    }
+    return {name:h.name, color:h.color, pct};
+  });
+  const gap=18;
+  const barW = 56;
+  const w = Math.max(560, 40 + data.length*(barW+gap));
+  const h=190;
+  const chartAreaH = h-46;
+  function truncate(name, maxChars){ return name.length>maxChars ? name.slice(0,Math.max(1,maxChars-1))+"…" : name; }
+  const maxChars = Math.max(5, Math.floor((barW+gap-6)/6));
+  let bars = "";
+  data.forEach((d,i)=>{
+    const x = 20 + i*(barW+gap);
+    const barH = chartAreaH * d.pct/100;
+    const y = chartAreaH - barH + 10;
+    bars += `<rect x="${x}" y="${y}" width="${barW}" height="${Math.max(barH,1)}" rx="6" fill="${d.color}"></rect>
+      <text x="${x+barW/2}" y="${chartAreaH+34}" text-anchor="middle" font-size="11" fill="#8B85A6"><title>${escapeHtml(d.name)}</title>${escapeHtml(truncate(d.name,maxChars))}</text>
+      <text x="${x+barW/2}" y="${y-6}" text-anchor="middle" font-size="11" fill="#2B2540">${d.pct}%</text>`;
+  });
+  document.getElementById("weekBarChart").innerHTML = `<svg viewBox="0 0 ${w} ${h}" width="100%">${bars}</svg>`;
+}
+
+function buildTimeScatter(habits){
+  const points=[];
+  habits.forEach(h=>{
+    const logsForHabit = state.logs[h.id]||{};
+    Object.entries(logsForHabit).forEach(([dateStr,entry])=>{
+      if(entry.done && entry.time){
+        const t=new Date(entry.time);
+        points.push({date:new Date(dateStr), hour:t.getHours()+t.getMinutes()/60, color:h.color, name:h.name});
+      }
+    });
+  });
+  const wrap = document.getElementById("timeScatterWrap");
+  if(points.length===0){ wrap.innerHTML='<div class="empty">Noch nicht genug Daten.</div>'; return; }
+  const minDate = new Date(Math.min(...points.map(p=>p.date.getTime())));
+  const maxDate = new Date(Math.max(...points.map(p=>p.date.getTime())));
+  const rangeMs = Math.max(1, maxDate-minDate);
+  const w=560, h=220, padL=40, padB=20, padT=10, padR=10;
+  let dots="";
+  points.forEach(p=>{
+    const x = padL + (rangeMs>0 ? (p.date-minDate)/rangeMs : 0.5) * (w-padL-padR);
+    const y = padT + (24-p.hour)/24 * (h-padT-padB);
+    dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="${p.color}" fill-opacity="0.85"><title>${escapeHtml(p.name)} - ${p.date.toLocaleDateString("de-DE")}</title></circle>`;
+  });
+  let grid="";
+  [0,6,12,18,24].forEach(hr=>{
+    const y = padT + (24-hr)/24*(h-padT-padB);
+    grid += `<text x="${padL-8}" y="${y+4}" text-anchor="end" font-size="10" fill="#8B85A6">${String(hr).padStart(2,"0")}:00</text>
+      <line x1="${padL}" y1="${y}" x2="${w-padR}" y2="${y}" stroke="#E7E4F3" stroke-width="1"></line>`;
+  });
+  wrap.innerHTML = `<svg viewBox="0 0 ${w} ${h}" width="100%">${grid}${dots}</svg>`;
+}
+
+// ---------- Day View ----------
+function renderDay(){
+  const dateStr = toDateStr(dayViewDate);
+  document.getElementById("dayLabel").textContent = dayViewDate.toLocaleDateString("de-DE",{weekday:"long", day:"numeric", month:"long"});
+
+  const activeHabits = state.habits.filter(h=>!h.archived && isTargetDay(h, dayViewDate));
+  const dayTasks = state.tasks.filter(t=>t.dateStr===dateStr);
+
+  const items = [];
+  activeHabits.forEach(h=>{
+    const entry = getLog(h.id, dateStr);
+    const hour = state.habitSchedule[h.id+"|"+dateStr];
+    items.push({ type:"habit", id:h.id, title:h.name, duration:h.duration, color:h.color, done: !!(entry&&entry.done), hour: hour===undefined?null:hour, note:"" });
+  });
+  dayTasks.forEach(t=>{
+    items.push({ type:"task", id:t.id, title:t.title, duration:t.duration, color:null, done: t.done, hour: t.hour===undefined?null:t.hour, note:t.note||"" });
+  });
+
+  const scheduled = items.filter(i=>i.hour!==null);
+  const unscheduled = items.filter(i=>i.hour===null);
+
+  let hoursHtml = "";
+  for(let h=0; h<24; h++){
+    if(state.hiddenHours.includes(h)) continue;
+    const inThisHour = scheduled.filter(i=>i.hour===h);
+    hoursHtml += `<div class="hour-row" data-hour="${h}">
+      <div class="hour-label">${String(h).padStart(2,"0")}:00</div>
+      <div class="hour-blocks">${inThisHour.map(renderBlock).join("")}</div>
+      <button class="hide-hour-btn" data-hide="${h}" title="Stunde ausblenden">✕</button>
+    </div>`;
+  }
+  document.getElementById("hourList").innerHTML = hoursHtml;
+
+  document.getElementById("inboxList").innerHTML = unscheduled.length
+    ? unscheduled.map(renderBlock).join("")
+    : '<div class="empty" style="padding:10px 0;">Alles verplant.</div>';
+
+  renderHiddenHoursBar(scheduled);
+  attachBlockHandlers();
+  attachDayControls();
+}
+
+function renderHiddenHoursBar(scheduled){
+  const bar = document.getElementById("hiddenHoursBar");
+  if(state.hiddenHours.length===0){ bar.innerHTML = ""; return; }
+  const hiddenCount = scheduled.filter(i=>state.hiddenHours.includes(i.hour)).length;
+  const sorted = [...state.hiddenHours].sort((a,b)=>a-b);
+  let html = sorted.map(h=>`<span class="chip" data-show="${h}">${String(h).padStart(2,"0")}:00 einblenden</span>`).join("");
+  html += `<span class="chip" id="showAllHours">Alle Stunden anzeigen</span>`;
+  if(hiddenCount>0) html += ` <span style="color:var(--coral)">· ${hiddenCount} Termin(e) in ausgeblendeten Stunden</span>`;
+  bar.innerHTML = html;
+}
+
+function attachDayControls(){
+  document.querySelectorAll("[data-hide]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const h = parseInt(btn.dataset.hide);
+      if(!state.hiddenHours.includes(h)) state.hiddenHours.push(h);
+      save(); renderDay();
+    });
+  });
+  document.querySelectorAll("[data-show]").forEach(chip=>{
+    chip.addEventListener("click", ()=>{
+      const h = parseInt(chip.dataset.show);
+      state.hiddenHours = state.hiddenHours.filter(x=>x!==h);
+      save(); renderDay();
+    });
+  });
+  const showAll = document.getElementById("showAllHours");
+  if(showAll) showAll.addEventListener("click", ()=>{ state.hiddenHours = []; save(); renderDay(); });
+}
+
+function renderBlock(item){
+  const cls = "block" + (item.done? " done":"");
+  const style = item.type==="habit" ? `style="border-left-color:${item.color}"` : "";
+  const actions = item.type==="task"
+    ? `<div class="block-actions"><button class="block-postpone" data-postpone-task="${item.id}" title="Auf morgen verschieben">→</button><button class="block-del" data-del-task="${item.id}" title="Löschen">×</button></div>`
+    : "";
+  return `<div class="${cls}" ${style} data-type="${item.type}" data-id="${item.id}">
+    ${actions}
+    <span>${escapeHtml(item.title)}</span>
+    <span class="dur">${item.duration} Min${item.note?" · "+escapeHtml(item.note):""}</span>
+  </div>`;
+}
+
+function attachBlockHandlers(){
+  document.querySelectorAll("#panel-day .block").forEach(el=>{
+    el.addEventListener("pointerdown", (e)=>{
+      if(e.target.closest(".block-actions")) return;
+      startDrag(e, el);
+    });
+  });
+  document.querySelectorAll(".block-del").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{
+      e.stopPropagation();
+      deleteTask(btn.dataset.delTask);
+    });
+  });
+  document.querySelectorAll(".block-postpone").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{
+      e.stopPropagation();
+      postponeTask(btn.dataset.postponeTask);
+    });
+  });
+}
+
+function postponeTask(id){
+  const task = state.tasks.find(t=>t.id===id);
+  if(!task) return;
+  const oldDateStr = task.dateStr, oldHour = task.hour;
+  const d = new Date(task.dateStr);
+  d.setDate(d.getDate()+1);
+  task.dateStr = toDateStr(d);
+  task.hour = null;
+  save();
+  renderDay();
+  showToast(`„${task.title}" auf morgen verschoben`, ()=>{ task.dateStr = oldDateStr; task.hour = oldHour; save(); renderDay(); });
+}
+
+function startDrag(e, el){
+  const type = el.dataset.type, id = el.dataset.id;
+  const startX = e.clientX, startY = e.clientY;
+  let moved = false;
+  let ghost = null;
+
+  function onMove(ev){
+    const dx = ev.clientX-startX, dy = ev.clientY-startY;
+    if(!moved && Math.hypot(dx,dy) > 8){
+      moved = true;
+      ghost = el.cloneNode(true);
+      ghost.classList.add("ghost-block");
+      ghost.style.width = el.offsetWidth+"px";
+      document.body.appendChild(ghost);
+      el.style.opacity = "0.35";
+    }
+    if(moved && ghost){
+      ghost.style.left = (ev.clientX+12)+"px";
+      ghost.style.top = (ev.clientY+12)+"px";
+      highlightDropTarget(ev.clientX, ev.clientY);
+    }
+  }
+  function onUp(ev){
+    document.removeEventListener("pointermove", onMove);
+    document.removeEventListener("pointerup", onUp);
+    clearDropHighlights();
+    if(moved){
+      const target = getDropTarget(ev.clientX, ev.clientY);
+      if(target){ applyDrop(type, id, target); }
+      if(ghost) ghost.remove();
+      el.style.opacity = "";
+      renderDay();
+    } else {
+      toggleItemDone(type, id);
+    }
+  }
+  document.addEventListener("pointermove", onMove);
+  document.addEventListener("pointerup", onUp);
+}
+
+function getDropTarget(x,y){
+  const el = document.elementFromPoint(x,y);
+  if(!el) return null;
+  const hourEl = el.closest(".hour-row");
+  if(hourEl) return { kind:"hour", hour: parseInt(hourEl.dataset.hour) };
+  const inboxEl = el.closest("#inboxList");
+  if(inboxEl) return { kind:"inbox" };
+  return null;
+}
+function highlightDropTarget(x,y){
+  clearDropHighlights();
+  const el = document.elementFromPoint(x,y);
+  if(!el) return;
+  const hourEl = el.closest(".hour-row");
+  if(hourEl) hourEl.classList.add("drag-over");
+  const inboxEl = el.closest("#inboxList");
+  if(inboxEl) inboxEl.classList.add("drag-over");
+}
+function clearDropHighlights(){
+  document.querySelectorAll(".drag-over").forEach(e=>e.classList.remove("drag-over"));
+}
+
+function applyDrop(type, id, target){
+  const hour = target.kind==="hour" ? target.hour : null;
+  if(type==="habit"){
+    const key = id+"|"+toDateStr(dayViewDate);
+    if(hour===null) delete state.habitSchedule[key]; else state.habitSchedule[key]=hour;
+  } else {
+    const task = state.tasks.find(t=>t.id===id);
+    if(task) task.hour = hour;
+  }
+  save();
+}
+
+function toggleItemDone(type, id){
+  if(type==="habit"){
+    const habit = state.habits.find(h=>h.id===id);
+    const dateStr = toDateStr(dayViewDate);
+    const entry = getLog(id, dateStr);
+    if(entry && entry.done){ setLog(id, dateStr, null); }
+    else { setLog(id, dateStr, { done:true, duration:habit.duration, time:new Date().toISOString(), note:"" }); }
+  } else {
+    const task = state.tasks.find(t=>t.id===id);
+    if(task){ task.done = !task.done; save(); }
+  }
+  renderDay();
+}
+
+function deleteTask(id){
+  const idx = state.tasks.findIndex(t=>t.id===id);
+  if(idx<0) return;
+  const [removed] = state.tasks.splice(idx,1);
+  save();
+  renderDay();
+  showToast(`Aufgabe „${removed.title}" gelöscht`, ()=>{ state.tasks.push(removed); save(); renderDay(); });
+}
+
+function openTaskForm(){
+  const wrap = document.getElementById("taskForm");
+  wrap.style.display="block";
+  wrap.innerHTML = `
+    <div class="form-row">
+      <div class="form-field" style="flex:2;"><label>Titel</label><input type="text" id="tTitle" placeholder="z.B. Steuererklärung"></div>
+      <div class="form-field"><label>Dauer (Min.)</label><input type="number" id="tDuration" value="30" min="0"></div>
+    </div>
+    <div class="form-field" style="margin-bottom:12px;"><label>Notiz</label><input type="text" id="tNote" placeholder="optional"></div>
+    <div class="btn-row">
+      <button class="btn-primary" id="tSave">Hinzufügen</button>
+      <button class="btn-secondary" id="tCancel">Abbrechen</button>
+    </div>
+  `;
+  document.getElementById("tCancel").onclick = ()=>{ wrap.style.display="none"; wrap.innerHTML=""; };
+  document.getElementById("tSave").onclick = ()=>{
+    const title = document.getElementById("tTitle").value.trim();
+    if(!title) return;
+    const duration = parseInt(document.getElementById("tDuration").value)||0;
+    const note = document.getElementById("tNote").value.trim();
+    state.tasks.push({ id: uid(), title, duration, note, done:false, hour:null, dateStr: toDateStr(dayViewDate), createdAt: new Date().toISOString() });
+    save();
+    wrap.style.display="none"; wrap.innerHTML="";
+    renderDay();
+  };
+}
+
+// ---------- Tabs & Nav ----------
+document.querySelectorAll(".tab").forEach(tab=>{
+  tab.addEventListener("click", ()=>{
+    document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+    document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+    tab.classList.add("active");
+    currentTab = tab.dataset.tab;
+    document.getElementById("panel-"+currentTab).classList.add("active");
+    if(currentTab==="stats") renderStats();
+    if(currentTab==="archive") renderArchive();
+    if(currentTab==="day") renderDay();
+  });
+});
+document.getElementById("prevWeek").addEventListener("click", ()=>{ weekOffset--; renderWeek(); });
+document.getElementById("nextWeek").addEventListener("click", ()=>{ weekOffset++; renderWeek(); });
+document.getElementById("showAddForm").addEventListener("click", ()=> openHabitForm(null));
+document.getElementById("cellOverlay").addEventListener("click", (e)=>{ if(e.target.id==="cellOverlay") e.target.classList.remove("show"); });
+document.getElementById("prevDay").addEventListener("click", ()=>{ dayViewDate.setDate(dayViewDate.getDate()-1); renderDay(); });
+document.getElementById("nextDay").addEventListener("click", ()=>{ dayViewDate.setDate(dayViewDate.getDate()+1); renderDay(); });
+document.getElementById("showTaskForm").addEventListener("click", openTaskForm);
+document.getElementById("genCode").addEventListener("click", ()=>{ document.getElementById("syncCode").value = genSyncCode(); });
+document.getElementById("connectSync").addEventListener("click", connectSync);
+
+renderWeek();
+autoConnectSync();
+</script>
+</body>
+</html>
