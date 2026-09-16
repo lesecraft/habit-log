@@ -230,7 +230,7 @@
   .hidden-hours-bar .chip{ background:var(--surface); border:1px solid var(--border); border-radius:999px; padding:4px 12px; cursor:pointer; }
   .hidden-hours-bar .chip:hover{ border-color: var(--purple); color:var(--purple); }
   .day-layout{ display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap; }
-  .hour-list{ flex:1; min-width:260px; max-height: 560px; overflow-y:auto; background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow); border-radius:var(--radius); }
+  .hour-list{ flex:1; min-width:260px; max-height: calc(100vh - 250px); min-height: 300px; overflow-y:auto; background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow); border-radius:var(--radius); }
   .hour-row{ display:flex; align-items:flex-start; gap:10px; min-height:46px; border-top:1px solid var(--border); padding:6px 8px; }
   .hour-row:first-child{ border-top:none; }
   .hour-row.drag-over{ background: var(--purple-soft); }
